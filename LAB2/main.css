@@ -1,0 +1,224 @@
+/*login*/
+.login-first{
+    text-align: center;
+    padding-top: 130px;
+    font-size: 13px;
+    color: rgb(23, 23, 100);
+}
+
+.login-box{
+    width: 400px;
+    height: 500px;
+
+    border: 1px solid rgb(23, 23, 100);
+    border-radius: 20px / 20px;
+    background-color: white;
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login-box > form > img{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-bottom: 30px;
+}
+
+.login-second{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(23, 23, 100);
+    font-size: 30px;
+    font-weight: 600;
+    position: absolute;
+    left: 50%;
+    top:30%;
+    transform: translate(-50%, 0);
+}
+
+.login-id > input, .login-pw > input{
+    font-size: 23px;
+    border: 1px solid rgb(23, 23, 100);
+    border-radius: 3px / 3px;
+    color: black;
+}
+
+.login-id > input{
+    position: absolute;
+    left: 11%;
+    top:47%;
+    width: 350px;
+    height: 40px;
+}
+
+.login-pw > input{
+    position: absolute;
+    left: 11%;
+    top:59%;
+    width: 350px;
+    height: 40px;
+}
+
+.login-submit > input{
+    position: absolute;
+    left: 67%;
+    top: 83%;
+    font-size: 23px;
+    border:0;
+    border-radius: 3px / 3px;
+    color: black;
+    cursor:pointer;
+    background-color: rgb(231, 231, 253);
+    width: 100px;
+    height: 40px;
+}
+
+.login-submit > input:hover{
+    background-color: rgb(199, 199, 255);
+}
+
+.login-signup{
+    position: absolute;
+    left: 11%;
+    top: 83%;
+    font-size: 20px;
+    border:0;
+    border-radius: 3px / 3px;
+    color: black;
+    cursor:pointer;
+    background-color: white;
+    width: 100px;
+    height: 40px;
+}
+
+.login-signup:hover{
+    background-color: rgb(231, 231, 253);
+}
+
+.login-stay{
+    position: absolute;
+    left: 9.5%;
+    top: 69%;
+    font-size: 15px;
+}
+
+.login-stay > input{
+    position:relative;
+    top:3px;
+    zoom: 2;
+    accent-color: rgb(231, 231, 253);
+}
+
+
+/*signup*/
+.signup-second{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(23, 23, 100);
+    font-size: 30px;
+    font-weight: 600;
+    position: absolute;
+    left: 50%;
+    top:5%;
+    transform: translate(-50%, 0);
+}
+
+.signup-id > input, .signup-confirmpw > input, .signup-pw > input, .signup-tel > input, .signup-email > input{
+    font-size: 23px;
+    border: 1px solid rgb(23, 23, 100);
+    border-radius: 3px / 3px;
+    color: black;
+}
+
+.signup-id > input{
+    position: absolute;
+    left: 11%;
+    top:15%;
+    width: 350px;
+    height: 40px;
+}
+
+.signup-pw > input{
+    position: absolute;
+    left: 11%;
+    top:25%;
+    width: 350px;
+    height: 40px;
+}
+
+.signup-confirmpw > input{
+    position: absolute;
+    left: 11%;
+    top:35%;
+    width: 350px;
+    height: 40px;
+}
+
+.signup-birth > input{
+    font-size: 23px;
+    border: 1px solid rgb(23, 23, 100);
+    border-radius: 3px / 3px;
+    color: rgb(117,117,117);
+    font-weight: 600;
+    text-align: right;
+
+    position: absolute;
+    left: 11%;
+    top: 45%;
+    width: 350px;
+    height: 40px;
+}
+
+.signup-birth > label{
+    font-size: 23px;
+    color: rgb(117,117,117);
+    z-index: 1;
+    position: absolute;
+    left: 13%;
+    top: 45.5%;
+}
+
+.signup-tel > input{
+    position: absolute;
+    left: 11%;
+    top:55%;
+    width: 350px;
+    height: 40px;
+}
+
+.signup-email > input{
+    position: absolute;
+    left: 11%;
+    top:65%;
+    width: 350px;
+    height: 40px;
+}
+
+.signup-submit > input{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(23, 23, 100);
+    background-color: rgb(231, 231, 253);
+    font-size: 23px;
+    font-weight: 600;
+    border: 1px solid rgb(23, 23, 100);
+    border-radius: 3px / 3px;
+    position: absolute;
+    left: 11%;
+    top:78%;
+    width: 350px;
+    height: 40px;
+}
+
+.signup-submit > input:hover{
+    background-color: rgb(199, 199, 255);
+}
+
+.signup-redirection{
+    position: absolute;
+    left: 19.5%;
+    top:89%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(23, 23, 100);
+    font-size: 16px;
+}
