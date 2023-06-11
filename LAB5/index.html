@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>IPS main</title>
+        <link rel="stylesheet" type="text/css" href="./main.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    </head>
+    
+    <body>
+        <div class="main-logo">
+            <h1>INTERNET PROGRAMMING SHOP</h1>
+            <div class="navigation">
+                <a href="./index.html">MainPage</a>
+                <a href="./login.html">LogIn</a>
+                <a href="./signup.html">SignUp</a>
+            </div>
+        </div>
+
+        <div class="flex-main">
+            <div class="flex-content">
+                <form>
+                    <div class="choose">
+                        <br><label for="category">Choose a category</label><br>
+                        <select name="category" id="category">
+                            <option value="ALL">ALL</option>
+                            <option value="HTML">HTML</option>
+                            <option value="CSS">CSS</option>
+                            <option value="JAVA">JAVA</option>
+                            <option value="XML">XML</option>
+                        </select>
+
+                        <br><br><label for="search">Enter search term</label><br>
+                        <input type="text" name="search" id="search" placeholder="HTML"/>
+                    </div>
+                    <br><button id="submit" type="button" onclick="flex(event)">Filter result</button>
+                </form>
+                <div class="flex-image" id="flex-image"></div>
+            </div>
+        </div>
+
+        <script>
+            load();
+            function load(){
+                const search = document.getElementById('search').value;
+                const category = document.getElementById('category').value;
+    
+                axios.get('http://localhost:3000/product')
+                    .then(response => {
+                        const data = response.data;
+    
+                        const filteredProducts = data.filter(product => {
+                            const productName = product['name'];
+                            const productCategory = product['category'];
+                            const searchSuccess = (search == null || (productName.toLowerCase().includes(search.toLowerCase())) || (productCategory.toLowerCase().includes(search.toLowerCase())));
+                            const categorySuccess = (category == "ALL" || (productCategory == category));
+                            return searchSuccess && categorySuccess;
+                        });
+    
+                        const container = document.getElementById('flex-image');
+                        container.innerHTML = '';
+    
+                        filteredProducts.forEach(product => {
+                            const productName = product['name'];
+                            const productCategory = product['category'];
+                            const productJpg = product['jpg'];
+                            const productId = product['id'];
+    
+                            container.innerHTML += "<div class='flex-divide'>"
+                                + "<a href='http://localhost:3000/product/" + `${productId}` + "'>"
+                                + "<img src='images/"+`${productId}`+".jpg' alt='"+`${productName}`+ "'>"
+                                + "</a>"
+                                + "</div>";
+                        });
+                    })
+           }
+           function flex(event) {
+                event.preventDefault();
+                load();
+            }
+        </script>
+    </body>
+</html>
